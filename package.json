@@ -1,0 +1,29 @@
+{
+  "name": "pyx-file-icon",
+  "displayName": "PYX File Icon",
+  "description": "Extensión para asignar un ícono personalizado a archivos con extensión .pyx",
+  "version": "1.0.0",
+  "publisher": "owellandry",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Themes",
+    "Icon Theme"
+  ],
+  "icon": "icon.png",
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "pyx-icon-theme",
+        "label": "PYX Icon Theme",
+        "path": "./fileIcons/pyx-icon-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/owellandry/PyRex"
+  }
+}

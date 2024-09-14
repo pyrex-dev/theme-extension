@@ -1,0 +1,14 @@
+{
+    "iconDefinitions": {
+      "_file_pyx": {
+        "iconPath": "./pyx.svg"
+      }
+    },
+    "fileExtensions": {
+      "pyx": "_file_pyx"
+    },
+    "languageIds": {},
+    "folderNames": {},
+    "folderNamesExpanded": {},
+    "fileNames": {}
+  }

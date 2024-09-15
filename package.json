@@ -1,29 +1,69 @@
 {
-  "name": "pyx-file-icon",
-  "displayName": "PYX File Icon",
+ "name": "pyx-icon",
+  "displayName": "pyx icon",
   "description": "Extensión para asignar un ícono personalizado a archivos con extensión .pyx",
-  "version": "1.0.0",
-  "publisher": "owellandry",
+  "version": "1.2.0",
+  "publisher": "pyrex-dev",
+  "main": "./out/extension.js",
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.63.0"
+  },
+  "activationEvents": [
+    "onIdentity:identity"
+  ],
+  "scripts": {
+    "build": "tsc && node ./out/extension.js",
+    "package": "vsce package",
+    "lint": "eslint . --ext .ts --fix"
   },
   "categories": [
     "Other",
-    "Themes",
-    "Icon Theme"
+    "Themes"
   ],
-  "icon": "icon.png",
   "contributes": {
     "iconThemes": [
       {
-        "id": "pyx-icon-theme",
-        "label": "PYX Icon Theme",
-        "path": "./fileIcons/pyx-icon-theme.json"
+        "id": "icons",
+        "label": "Icons",
+        "path": "./icons.json"
       }
     ]
   },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#45403d",
+    "theme": "dark"
+  },
+  "keywords": [
+    "icons",
+    "theme",
+    "icon-theme",
+    "others"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/owellandry/PyRex"
+    "url": "git+https://github.com/pyrex-dev/theme-extension/.git"
+  },
+  "author": {
+    "email": "talhaouycoding@gmail.com",
+    "name": "Mhammed Talhaouy"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyrex/theme-extension/issues"
+  },
+  "homepage": "https://github.com/pyrex-dev/theme-extension/#readme",
+  "devDependencies": {
+    "@types/node": "^14.18.9",
+    "@types/vscode": "^1.63.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.4",
+    "vsce": "^2.6.3"
+  },
+  "dependencies": {
+    "install": "^0.13.0"
   }
 }
